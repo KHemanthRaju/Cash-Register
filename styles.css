@@ -1,7 +1,10 @@
 *{
-    
+    margin:auto;
+    padding:0.5rem;
     align-items:center;
     text-align:center;
+    background-color:green;
+    color:white;
 }
 
 .container{
@@ -9,4 +12,8 @@
     flex-direction:column;
     width:50vw;
 
+}
+
+.change-table{
+    display:block;
 }
