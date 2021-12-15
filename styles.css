@@ -1,0 +1,19 @@
+*{
+    margin:auto;
+    padding:0.5rem;
+    align-items:center;
+    text-align:center;
+    background-color:green;
+    color:white;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    width:50vw;
+
+}
+
+table, th, td{
+    border:1px solid white;
+}
