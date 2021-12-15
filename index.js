@@ -2,6 +2,9 @@ const billAmount = document.querySelector("#bill-amount");
 const cashGiven = document.querySelector("#cash-given");
 const checkButton = document.querySelector("#check-button");
 const message = document.querySelector("#error-message");
+const noOfNotes = document.querySelectorAll(".no-of-notes");
+
+const noOfAvailableNotes = [2000, 500, 100, 20, 10, 5, 1];
 
 checkButton.addEventListener("click", function validateBillAndCashAmount(){
     hideMessage();
@@ -10,15 +13,19 @@ checkButton.addEventListener("click", function validateBillAndCashAmount(){
             const amountToBeReturned = cashGiven.value - billAmount.value;
             calculateChange(amountToBeReturned);
         }else{
-            showMessage("The cash provided should atleast be equal to the bill amount");
+            showMessage("Do you wanna wash plates?");
         }
     }else{
         showMessage("Invalid Bill Amount");
     }
 });
 
-function calculateChange(){
-
+function calculateChange(amount){
+    for(let i=0;i<noOfAvailableNotes.length;i++){
+        const numberOfNotes = Math.trunc(amount/noOfAvailableNotes[i]);
+        amount %= noOfAvailableNotes[i];
+        noOfNotes[i].innerText = numberOfNotes;
+    }
 }
 
 function hideMessage(){
