@@ -20,13 +20,9 @@ table, th, td{
 
 .input{
     padding: 0.6rem 1rem;
-    margin: 1rem;
+    margin: 0.5rem;
     border: 2px solid;
     border-radius: 0.5rem;
-}
-
-#cash-given,#bill-amount{
-    border-radius: 1rem;
 }
 
 #check-button{
