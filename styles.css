@@ -25,6 +25,10 @@ table, th, td{
     border-radius: 0.5rem;
 }
 
+#cash-given,#bill-amount{
+    border-radius: 1rem;
+}
+
 #check-button{
     background:rgb(143, 240, 135);
     border: none;
