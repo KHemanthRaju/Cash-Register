@@ -3,22 +3,24 @@ const cashGiven = document.querySelector("#cash-given");
 const checkButton = document.querySelector("#check-button");
 const message = document.querySelector("#error-message");
 const noOfNotes = document.querySelectorAll(".no-of-notes");
+const returnBalance = document.querySelector('#return');
 
 const noOfAvailableNotes = [2000, 500, 100, 20, 10, 5, 1];
-cashGiven.style.display = "none";
+hideMessage();
 
 checkButton.addEventListener("click", function validateBillAndCashAmount(){
+    console.log(~~billAmount.value + ~~cashGiven.value);
     hideMessage();
-    cashGiven.style.display = "block";
-    if(billAmount.value > 0){
-        if(cashGiven.value >= billAmount.value){
+    if(~~billAmount.value > 0){
+        if(~~cashGiven.value >= ~~billAmount.value){
             const amountToBeReturned = cashGiven.value - billAmount.value;
+            returnBalance.innerText = 'Rs. '+amountToBeReturned;
             calculateChange(amountToBeReturned);
         }else{
             showMessage("Do you wanna wash plates?");
         }
     }else{
-        showMessage("Invalid Bill Amount");
+        showMessage("Cash given should be greater than zero!");
     }
 });
 

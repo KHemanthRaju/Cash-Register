@@ -3,8 +3,8 @@
     padding:0.5rem;
     align-items:center;
     text-align:center;
-    background-color:green;
-    color:white;
+    background-color:rgb(198, 248, 198);
+    color:rgb(37, 177, 5);
 }
 
 .container{
@@ -16,4 +16,42 @@
 
 table, th, td{
     border:1px solid white;
+}
+
+.input{
+    padding: 0.6rem 1rem;
+    margin: 1rem;
+    border: 2px solid;
+    border-radius: 0.5rem;
+}
+
+#check-button{
+    background:rgb(143, 240, 135);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    outline: #000;
+    margin: auto;
+    display: block;
+}
+
+.social{
+    text-align: center;
+}
+
+.social a{
+    color:var(--border-color);
+    font-size: x-large;
+}
+.social ul{
+    list-style: none;
+}
+.social ul li{
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+}
+.social a:hover{
+    cursor: pointer;
+    color: var(--primary-color);
 }
