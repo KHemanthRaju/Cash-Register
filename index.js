@@ -12,10 +12,12 @@ checkButton.addEventListener("click", function validateBillAndCashAmount(){
     console.log(~~billAmount.value + ~~cashGiven.value);
     hideMessage();
     if(~~billAmount.value > 0){
-        if(~~cashGiven.value >= ~~billAmount.value){
+        if(~~cashGiven.value > ~~billAmount.value){
             const amountToBeReturned = cashGiven.value - billAmount.value;
             returnBalance.innerText = 'Rs. '+amountToBeReturned;
             calculateChange(amountToBeReturned);
+        }else if(~~cashGiven.value === ~~billAmount.value){
+            showMessage("No change require to be given");
         }else{
             showMessage("Do you wanna wash plates?");
         }
